@@ -1,0 +1,57 @@
+class ClassMate implements Comparable<ClassMate>{
+  private int rollNo;
+  private String name;
+  Private int rank;
+  
+  public ClassMate(int roll , String name , int rank){
+    this.rollNo = roll;
+    this.name = name;
+    this.rank = rank;
+  }
+  
+  public void setRollNo(int rno){
+    this.rollNo;
+  }
+  
+  public int getRollNo(){
+    return rollNo;
+  }
+  
+  
+  
+  public void setName(String name){
+    this.name;
+  }
+  
+  public String getName(){
+    return name;
+  }
+  
+  
+  public void setRank(int rank){
+    this.rank;
+  }
+  
+  public int getRank(){
+    return rank;
+  }
+  
+  public int compareTo(ClassMate cm){
+    return rollNo>cm.rollNo?1:-1;
+  }
+  
+}
+
+
+
+public class ClassComparing{
+  public static void main(String args[]){
+    List<ClassMate> st = Arrays.asList(
+      new ClassMate(01,"Jatin",02),
+      new ClassMate(02,"Ashish",01),
+      new ClassMate(03,"Sachin",03)
+    );
+    
+    Collections.sort(st);
+  }
+}
